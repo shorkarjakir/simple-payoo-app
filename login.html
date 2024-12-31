@@ -12,16 +12,19 @@
         <div class="artboard phone-1 border-x-2 border-y-2 border-cyan-500">
             <!-- Under the phone -->
             <div class="flex justify-between items-center p-4 mt-[10%]">
-                <div class="text-lg font-semibold">Available Balance: $<span>20</span></div>
+                <div class="text-lg font-semibold">Available Balance: $<span id="Available-balance">20</span></div>
                 <button class="btn btn-primary">Logout</button>
             </div>
             <!-- Money add and cashout -->
             <div class="flex gap-[20%] justify-center mt-[5%]">
-                <button class="btn btn-primary">Add Money</button>
-                <button class="btn btn-secondary">cash Out</button>
+                <button id="show-add-money-form" class="btn btn-primary">Add Money</button>
+                <button id="show-cashout-form" class="btn btn-secondary">cash Out</button>
             </div>
             <!-- Money Deposit option -->
-            <form class="card-body">
+            <form id="add-money-form" class="hidden card-body">
+              <label for="">
+                <h2 class="text-2xl text-green-500">Deposit Form</h2>
+              </label>
                 <div class="form-control">
                   <label class="label">
                     <span class="label-text">Amount</span>
@@ -35,11 +38,35 @@
                   <input id="type-pin" type="password" placeholder="Pin" class="input input-bordered" required />
                 </div>
                 <div class="form-control mt-6">
-                  <button id="login-btn" class="btn btn-primary">Add Money</button>
+                  <button id="add-money-btn" class="btn btn-primary">Add Money</button>
+                </div>
+              </form>
+
+              <!-- Money Cashout Option -->
+              <form id="cashout-money-form" class="hidden card-body">
+                <label for="">
+                  <h2 class="text-2xl text-rose-600">Cashout Form</h2>
+                </label>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Amount</span>
+                  </label>
+                  <input id="input-cashout-amount" type="text" placeholder="Amount to cashout" class="input input-bordered" required />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin</span>
+                  </label>
+                  <input id="type-cashout-pin" type="password" placeholder="Pin" class="input input-bordered" required />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="add-money-cashout-btn" class="btn btn-primary">Cashout Money</button>
                 </div>
               </form>
     
         </div>
     </main>
-</b</div>ody>
+    <script src="./js/home.js"></script>
+    <script src="./js/cashOut.js"></script>
+    <script src="./js/feature.js"></script>
 </html>
